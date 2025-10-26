@@ -120,5 +120,22 @@
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: #eaeaea;
 }
+
+@keyframes pulseHighlight {
+    0% {
+        background-color: rgba(247, 101, 101, 0.5);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+.highlighted {
+    animation: pulseHighlight 1.8s ease-out;
+}
+
+/* * {
+    outline: 2px solid #90000020;
+} */

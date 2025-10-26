@@ -3,3 +3,4 @@ export { NotFoundPage } from './notFound/NotFoundPage';
 export { ToiArtPages } from './toiArt/ToiArtPage';
 export { ToiArtWidePage } from './toiArtWide/ToiArtWidePage';
 export { DetailPage } from './detail/DetailPage';
+export { AboutUs } from './aboutUs/AboutUs';

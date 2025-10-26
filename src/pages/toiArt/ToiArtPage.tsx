@@ -1,21 +1,13 @@
 import type { FC } from 'react';
 import toiartData from '@/utils/json/toiartData.json';
-import { Link, useNavigate } from 'react-router';
-import { Button, Card, CardContent, Container } from '@/components';
+import { Card, CardContent, Container } from '@/components';
+import { Link } from 'react-router';
 
 export const ToiArtPages: FC = () => {
-    const navigate = useNavigate();
-
     return (
         <Container className="px-4 sm:px-6 lg:px-8">
             {toiartData.map((category) => (
                 <div key={category.brand} className="max-w-7xl mx-auto relative mt-10">
-                    <Button
-                        onClick={() => navigate(-1)}
-                        className="absolute -top-10 left-0 sm:-top-12 text-sm sm:text-base">
-                        Назад
-                    </Button>
-
                     <h2 className="font-bold text-2xl sm:text-3xl mb-6 text-center sm:text-left">
                         {category.category}
                     </h2>

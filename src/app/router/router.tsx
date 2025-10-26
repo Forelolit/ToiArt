@@ -24,6 +24,10 @@ export const router = createBrowserRouter([
                 element: <Pages.ToiArtWidePage />,
             },
             {
+                path: path.aboutUs,
+                element: <Pages.AboutUs />,
+            },
+            {
                 path: path.servicesToiArt,
                 element: <Pages.DetailPage />,
             },
