@@ -42,8 +42,8 @@ export const Footer: FC = () => {
                             href="https://maps.google.com/?q=ЖК Триумф-Стиль, Жоомарта Боконбаева 103"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="block hover:text-neutral-900 transition-colors">
-                            Адрес: ЖК Триумф-Стиль,​ул. Жоомарта Боконбаева, 103, 1 этаж
+                            className="block hover:text-neutral-900 transition-colors px-2 sm:px-0">
+                            Адрес: ЖК Триумф-Стиль, ​ул. Жоомарта Боконбаева, 103, 1 этаж
                         </a>
                     </div>
                 </div>

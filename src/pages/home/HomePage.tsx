@@ -10,7 +10,7 @@ export const HomePage: FC = () => {
     return (
         <section className="grid justify-self-center">
             <Container>
-                <div className="flex flex-col sm:flex-row justify-between gap-4 sm:gap-10 mb-3">
+                <div className="flex flex-col sm:flex-row justify-between gap-4 sm:gap-10 mb-8 md:mb-3">
                     <h1 className="ml-5 mt-3 sm:mt-10 text-start text-4xl sm:text-5xl lg:text-8xl font-extrabold text-neutral-900 tracking-tight">
                         16 лет
                         <br />
@@ -27,7 +27,7 @@ export const HomePage: FC = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row justify-between gap-4 mx-2 sm:mx-0">
+                <div className="flex flex-col md:flex-row justify-between gap-4 mx-2 md:mx-0">
                     <div className="bg-white w-full rounded-4xl shadow-md border border-neutral-800 p-4 sm:p-5 flex flex-col justify-between">
                         <div className="w-32 sm:w-[200px] h-auto overflow-hidden mb-2">
                             <img
@@ -47,7 +47,7 @@ export const HomePage: FC = () => {
                             </p>
                         </div>
                         <Link to={path.toiArt}>
-                            <Button className="rounded-3xl w-full sm:w-auto whitespace-normal px-5 py-7 text-base sm:text-xl font-bold">
+                            <Button className="rounded-3xl w-full sm:w-auto whitespace-normal px-5 py-7 text-base lg:text-xl font-bold">
                                 Узнать больше о продукции TOI-ART
                             </Button>
                         </Link>
@@ -77,7 +77,7 @@ export const HomePage: FC = () => {
                             </p>
                         </div>
                         <Link to={path.toiArt}>
-                            <Button className="rounded-3xl w-full sm:w-auto whitespace-normal px-5 py-7 text-base sm:text-xl font-bold">
+                            <Button className="rounded-3xl w-full sm:w-auto whitespace-normal px-5 py-7 text-base lg:text-xl font-bold">
                                 Узнать больше о продукции TOI-ART-WIDE
                             </Button>
                         </Link>

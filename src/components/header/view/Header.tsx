@@ -11,14 +11,26 @@ export const Header: FC = () => {
 
     return (
         <header className="mb-5 sm:mb-10 relative">
-            <Container className="flex items-center justify-evenly py-4">
-                <Link to={path.home} className="flex items-center gap-2">
-                    <img
-                        src={logoToiArt}
-                        alt="Логотип TOIART"
-                        className="w-[100px] sm:w-[120px] h-auto object-contain"
-                    />
-                </Link>
+            <Container className="flex items-center justify-between md:justify-evenly px-4 sm:px-0 py-4">
+                <div className="flex items-center gap-3 md:gap-0">
+                    <Link to={path.home}>
+                        <img
+                            src={logoToiArt}
+                            alt="Логотип TOIART"
+                            className="w-[60px] sm:w-[100px] md:-[120px] h-auto object-contain"
+                        />
+                    </Link>
+
+                    <div className="h-4 sm:h-6 border-r border-e-neutral-400 md:hidden" />
+
+                    <Link to={path.toiArtWide} className="block md:hidden">
+                        <img
+                            src={logoToiArtWide}
+                            alt="Логотип TOIARTWIDE"
+                            className="w-[140px] sm:w-[200px] h-auto object-contain"
+                        />
+                    </Link>
+                </div>
 
                 <ul className="hidden md:flex justify-between items-center gap-10 px-6 py-2 text-lg font-light rounded-full bg-black text-white">
                     {navlink.map((i) => (
@@ -30,17 +42,17 @@ export const Header: FC = () => {
                     ))}
                 </ul>
 
-                <Link to={path.toiArtWide} className="hidden sm:block">
+                <Link to={path.toiArtWide} className="hidden md:block">
                     <img
                         src={logoToiArtWide}
                         alt="Логотип TOIARTWIDE"
-                        className="w-[140px] sm:w-40 h-auto object-contain"
+                        className="w-[140px] sm:w-[200px] h-auto object-contain"
                     />
                 </Link>
 
                 <button
                     onClick={() => setMenuOpen((prev) => !prev)}
-                    className="md:hidden text-neutral-800 hover:text-neutral-950 transition-colors"
+                    className="md:hidden text-neutral-800 hover:text-neutral-950 transition-colors ml-auto"
                     aria-label="Открыть меню">
                     {menuOpen ? <X size={28} /> : <Menu size={28} />}
                 </button>
