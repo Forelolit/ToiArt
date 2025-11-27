@@ -5,6 +5,7 @@ import { Link } from 'react-router';
 import logoToiArt from '@/assets/svg/logoToiArt.svg';
 import logoToiArtWide from '@/assets/svg/logoToiArtWide.svg';
 import { Menu, X } from 'lucide-react';
+import { HashLink } from 'react-router-hash-link';
 
 export const Header: FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -33,13 +34,30 @@ export const Header: FC = () => {
                 </div>
 
                 <ul className="hidden md:flex justify-between items-center gap-10 px-6 py-2 text-lg font-light rounded-full bg-black text-white">
-                    {navlink.map((i) => (
-                        <li key={i.label}>
-                            <Link to={i.link} className="hover:text-blue-200 transition-colors">
-                                {i.label}
-                            </Link>
-                        </li>
-                    ))}
+                    {navlink.map((i) =>
+                        i.link.slice(0, 1) === '#' ? (
+                            <li key={i.label}>
+                                <HashLink
+                                    to={i.link}
+                                    scroll={(el) => {
+                                        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                        el.style.background = '#ff000080';
+                                        setTimeout(() => {
+                                            el.style.background = 'transparent';
+                                        }, 2500);
+                                    }}
+                                    className="hover:text-blue-200 transition-colors">
+                                    {i.label}
+                                </HashLink>
+                            </li>
+                        ) : (
+                            <li key={i.label}>
+                                <Link to={i.link} className="hover:text-blue-200 transition-colors">
+                                    {i.label}
+                                </Link>
+                            </li>
+                        ),
+                    )}
                 </ul>
 
                 <Link to={path.toiArtWide} className="hidden md:block">
@@ -63,16 +81,34 @@ export const Header: FC = () => {
                     menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}>
                 <ul className="flex flex-col items-center gap-4 py-6 text-lg font-light">
-                    {navlink.map((i) => (
-                        <li key={i.label}>
-                            <Link
-                                to={i.link}
-                                onClick={() => setMenuOpen(false)}
-                                className="hover:text-blue-200 transition-colors">
-                                {i.label}
-                            </Link>
-                        </li>
-                    ))}
+                    {navlink.map((i) =>
+                        i.link.slice(0, 1) === '#' ? (
+                            <li key={i.label}>
+                                <HashLink
+                                    to={i.link}
+                                    scroll={(el) => {
+                                        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                        el.style.background = '#ff000080';
+                                        setTimeout(() => {
+                                            el.style.background = 'transparent';
+                                        }, 2500);
+                                    }}
+                                    onClick={() => setMenuOpen(false)}
+                                    className="hover:text-blue-200 transition-colors">
+                                    {i.label}
+                                </HashLink>
+                            </li>
+                        ) : (
+                            <li key={i.label}>
+                                <Link
+                                    to={i.link}
+                                    onClick={() => setMenuOpen(false)}
+                                    className="hover:text-blue-200 transition-colors">
+                                    {i.label}
+                                </Link>
+                            </li>
+                        ),
+                    )}
                 </ul>
             </div>
         </header>

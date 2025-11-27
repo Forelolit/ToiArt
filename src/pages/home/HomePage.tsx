@@ -11,7 +11,7 @@ export const HomePage: FC = () => {
         <section className="grid justify-self-center">
             <Container>
                 <div className="flex flex-col sm:flex-row justify-between gap-4 sm:gap-10 mb-8 md:mb-3">
-                    <h1 className="ml-5 mt-3 sm:mt-10 text-start text-4xl sm:text-5xl lg:text-8xl font-extrabold text-neutral-900 tracking-tight">
+                    <h1 className="ml-5 mt-3 sm:mt-10 text-start text-nowrap text-4xl sm:text-5xl lg:text-8xl font-extrabold text-neutral-900 tracking-tight">
                         16 лет
                         <br />
                         на рынке
@@ -22,7 +22,7 @@ export const HomePage: FC = () => {
                             src={heroPrint}
                             alt="Полиграфия TOIART"
                             draggable={false}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-contain"
                         />
                     </div>
                 </div>
