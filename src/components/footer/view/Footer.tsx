@@ -10,22 +10,22 @@ export const Footer: FC = () => {
         <footer className="border-t border-neutral-300 mt-20">
             <Container>
                 <div className="flex flex-col md:flex-row justify-around items-center gap-8 py-5">
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
-                        <Link to={path.toiArt} className="w-[100px] hover:opacity-80 transition-opacity">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+                        <Link to={path.home}>
                             <img
                                 src={logoToiArt}
                                 alt="Логотип TOIART"
-                                draggable={false}
-                                className="w-full h-auto object-contain"
+                                className="w-20 sm:w-[100px] md:-[120px] h-auto object-contain hover:opacity-80 transition-opacity"
                             />
                         </Link>
 
-                        <Link to={path.toiArtWide} className="w-40 hover:opacity-80 transition-opacity">
+                        <div className="h-4 sm:h-6 border-r border-e-neutral-400 hidden sm:block" />
+
+                        <Link to={path.toiArtWide} className="">
                             <img
                                 src={logoToiArtWide}
                                 alt="Логотип TOIARTWIDE"
-                                draggable={false}
-                                className="w-full h-auto object-contain"
+                                className="w-[155px] sm:w-[200px] h-auto object-contain hover:opacity-80 transition-opacity"
                             />
                         </Link>
                     </div>
@@ -39,11 +39,11 @@ export const Footer: FC = () => {
                         </a>
                         <a
                             id="adress"
-                            href="https://maps.google.com/?q=ЖК Триумф-Стиль, Жоомарта Боконбаева 103"
+                            href="https://maps.app.goo.gl/vyEE1Pfjpq2vBn9C9"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="block hover:text-neutral-900 transition-colors px-2 sm:px-0">
-                            Адрес: ЖК Триумф-Стиль, ​ул. Жоомарта Боконбаева, 103, 1 этаж
+                            Адрес: 103 ул. Боконбаева, Бишкек 720040
                         </a>
                     </div>
                 </div>

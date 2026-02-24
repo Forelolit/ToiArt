@@ -76,7 +76,7 @@ export const HomePage: FC = () => {
                                 оформление интерьеров
                             </p>
                         </div>
-                        <Link to={path.toiArt}>
+                        <Link to={path.toiArtWide}>
                             <Button className="rounded-3xl w-full sm:w-auto whitespace-normal px-5 py-7 text-base lg:text-xl font-bold">
                                 Узнать больше о продукции TOI-ART-WIDE
                             </Button>

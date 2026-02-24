@@ -18,7 +18,7 @@ export const Header: FC = () => {
                         <img
                             src={logoToiArt}
                             alt="Логотип TOIART"
-                            className="w-[60px] sm:w-[100px] md:-[120px] h-auto object-contain"
+                            className="w-[60px] sm:w-[100px] md:-[120px] h-auto object-contain hover:opacity-80 transition-opacity"
                         />
                     </Link>
 
@@ -28,14 +28,14 @@ export const Header: FC = () => {
                         <img
                             src={logoToiArtWide}
                             alt="Логотип TOIARTWIDE"
-                            className="w-[140px] sm:w-[200px] h-auto object-contain"
+                            className="w-[140px] sm:w-[200px] h-auto object-contain hover:opacity-80 transition-opacity"
                         />
                     </Link>
                 </div>
 
                 <ul className="hidden md:flex justify-between items-center gap-10 px-6 py-2 text-lg font-light rounded-full bg-black text-white">
                     {navlink.map((i) =>
-                        i.link.slice(0, 1) === '#' ? (
+                        i.link.startsWith('#') ? (
                             <li key={i.label}>
                                 <HashLink
                                     to={i.link}
@@ -64,7 +64,7 @@ export const Header: FC = () => {
                     <img
                         src={logoToiArtWide}
                         alt="Логотип TOIARTWIDE"
-                        className="w-[140px] sm:w-[200px] h-auto object-contain"
+                        className="w-[140px] sm:w-[200px] h-auto object-contain hover:opacity-80 transition-opacity"
                     />
                 </Link>
 
@@ -82,7 +82,7 @@ export const Header: FC = () => {
                 }`}>
                 <ul className="flex flex-col items-center gap-4 py-6 text-lg font-light">
                     {navlink.map((i) =>
-                        i.link.slice(0, 1) === '#' ? (
+                        i.link.startsWith('#') ? (
                             <li key={i.label}>
                                 <HashLink
                                     to={i.link}
